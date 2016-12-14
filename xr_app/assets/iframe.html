@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<!--   <link href="main.css" rel="stylesheet">
+ --></head>
+<body>
+  <div id="content"></div>
+  <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
+  <script id="requester-template" type="text/x-handlebars-template">
+    <table>
+    <tr>
+      <td>Customer:</td>
+      <td>{{name}}</td>
+    </tr>
+    <tr>
+      <td>Tilt Tags:</td>
+      <td>{{#each tags}}{{this}} {{/each}}</td>
+    </tr>
+    <tr>
+      <td>Tilts :</td>
+      <td>{{tilts_started}}</td>
+    </tr>
+    <tr>
+      <td>Tilts Contributed:</td>
+      <td>{{tilts_contributed}}</td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td>{{tilts_location}}</td>
+    </tr>
+    <tr>
+      <td>Phone number:</td>
+      <td>{{tilts_phone_number}}</td>
+    </tr>
+    </table>
+  </script>
+  <script id="error-template" type="text/x-handlebars-template">
+    <p>{{status}} - {{statusText}} error. Please report a bug at the link below.</p>
+  </script>
+  <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
